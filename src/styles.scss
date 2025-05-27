@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/presets/fonts.scss";
+@import "./assets/presets/containers.scss";
+
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+@import "swiper/scss/effect-fade";
+
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "aos/dist/aos.css";
+
+:root {
+  --primary: #5e27ef;
+  --secondary: linear-gradient(45deg, #276def, #5e27ef, #b84a86);
+  --black: black;
+  --text-default: #646464;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #ffffff;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+a,
+p {
+  color: var(--text-default);
+  margin: 0;
+}
