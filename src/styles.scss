@@ -53,3 +53,26 @@ p {
 img {
   object-fit: cover;
 }
+
+button {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.p-sidebar .p-sidebar-content {
+  padding: 0px;
+  box-shadow: 30px 0px 50px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.p-sidebar {
+  background-color: #000000 !important;
+}
+.p-sidebar .p-sidebar-header {
+  display: none;
+}
+
+.p-component-overlay {
+  display: none;
+}

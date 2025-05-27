@@ -1,18 +1,21 @@
 <nav id="nav">
-  <div class="container">
-    <div class="content" [ngClass]="{ scroll: scrollFlag }">
-      <!-- <div class="nav-desktop"></div> -->
-      <div class="nav-mobile">
-        <div class="menu">
-          <!-- <i class="pi pi-bars"></i> -->
-          <svg width="30" height="30" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <line x1="2" y1="3" x2="22" y2="3" stroke="white" stroke-width="4" stroke-linecap="round" />
-            <line x1="2" y1="9" x2="22" y2="9" stroke="white" stroke-width="4" stroke-linecap="round" />
-            <line x1="2" y1="15" x2="22" y2="15" stroke="white" stroke-width="4" stroke-linecap="round" />
-          </svg>
-        </div>
-        <div class="logo">
-          <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  <div class="black">
+    <div class="container">
+      <div class="content" [ngClass]="{ scroll: scrollFlag }">
+        <!-- <div class="nav-desktop"></div> -->
+        <div class="nav-mobile">
+          <div class="menu" (click)="sidebarVisible = !sidebarVisible">
+            <svg width="30" height="30" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <line x1="2" y1="3" x2="22" y2="3" stroke="white" stroke-width="4" stroke-linecap="round" />
+              <line x1="2" y1="9" x2="22" y2="9" stroke="white" stroke-width="4" stroke-linecap="round" />
+              <line x1="2" y1="15" x2="22" y2="15" stroke="white" stroke-width="4" stroke-linecap="round" /> -->
+              <line x1="2" y1="3" x2="22" y2="3" stroke="white" stroke-width="4" />
+              <line x1="2" y1="9" x2="22" y2="9" stroke="white" stroke-width="4" />
+              <line x1="2" y1="15" x2="22" y2="15" stroke="white" stroke-width="4" />
+            </svg>
+          </div>
+          <div class="logo">
+            <!-- <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             x="0px" y="0px" viewBox="0 0 400 400" style="enable-background:new 0 0 400 400;" xml:space="preserve">
             <style type="text/css">
               .st0 {
@@ -189,17 +192,54 @@
 		c0.1-0.1,0.1-0.2,0.2-0.3c0,0,0-0.2,0.1-0.4C361.7,164.7,355.4,139.3,340.3,119.4z"></path>
             </g>
           </svg> -->
-        <img src="/assets/images/logos/logo-full-white.png" alt="">
-        </div>
-        <div class="search">
-          <!-- <i class="pi pi-search"></i> -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2" />
-            <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" />
-          </svg>
-
+            <img src="/assets/images/logos/logo-full-white.png" alt="">
+          </div>
+          <div class="search" (click)="searchbarVisible = !searchbarVisible">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="white" stroke-width="2" />
+              <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="search-content" [ngClass]="{ display: searchbarVisible }">
+    <div class="container">
+      <div class="input">
+        <input type="text" placeholder="Busca un puebo o estado...">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="11" r="7" stroke="black " stroke-width="2" />
+          <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="black" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </div>
+    </div>
+  </div>
 </nav>
+
+<div class="menu-content">
+  <p-sidebar [(visible)]="sidebarVisible" position="left">
+    <div class="menu-mobile">
+      <div class="menu">
+        <div class="logo">
+          <img src="/assets/images/logos/logo-full-white.png" alt="Logotipo Tequila">
+          <button (click)="sidebarVisible = !sidebarVisible">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="18" y1="6" x2="6" y2="18" stroke="white" stroke-width="3" />
+              <line x1="6" y1="6" x2="18" y2="18" stroke="white" stroke-width="3" />
+            </svg>
+          </button>
+        </div>
+        <div class="routes">
+          @for (item of routers; track $index) {
+          <a href="javascript:void(0)" (click)="goTo(item.goTo);sidebarVisible = !sidebarVisible"
+            [routerLink]="item.route"> {{item.name}} </a>
+          }
+        </div>
+      </div>
+      <div class="last">
+        <p>© 2024 Pueblos Mágicos | México Desconocido</p>
+      </div>
+    </div>
+  </p-sidebar>
+</div>

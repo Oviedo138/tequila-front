@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class NavBarComponent {
 
   public sidebarVisible: boolean = false;
+  public searchbarVisible: boolean = false;
+
   private scrollListener: boolean = true;
   public scrollFlag: string = '';
   public url: string = '';
@@ -17,8 +19,22 @@ export class NavBarComponent {
 
   public routers = [
     {
-      nameEn: 'HOME',
-      nameEs: 'INICIO',
+      name: 'Inicio',
+      route: '/home',
+      goTo: 'nav'
+    },
+    {
+      name: 'Los 177 Pueblos Mágicos',
+      route: '/home',
+      goTo: 'nav'
+    },
+    {
+      name: 'Estados',
+      route: '/home',
+      goTo: 'nav'
+    },
+    {
+      name: 'México Desconocido',
       route: '/home',
       goTo: 'nav'
     },
