@@ -16,7 +16,13 @@ nav {
         cursor: pointer;
       }
       .logo {
-        width: 50px;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        img {
+          height: 45px;
+          width: fit-content;
+        }
       }
       .menu {
         width: fit-content;
