@@ -1,0 +1,111 @@
+section {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 48%) 60%, rgba(0, 0, 0, 48%) 60%), url('/assets/images/tequila-banner.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-attachment: fixed;
+
+  @media(max-width: 1200px) {
+    background-size: contain;
+    background-position-y: top;
+    height: auto;
+  }
+
+  .content {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @media(max-width: 1200px) {
+      gap: 190px;
+    }
+
+    @media(max-width: 991px) {
+      gap: 22px;
+    }
+
+    .tag {
+      background-color: rgba(0, 0, 0, 0.238);
+      padding: 8px 30px;
+      border-radius: 30px;
+      width: fit-content;
+      display: flex;
+      gap: 6px;
+
+      p {
+        font-family: 'Open Sans Regular';
+        font-size: 16px;
+        color: white;
+      }
+    }
+
+    .info {
+      padding-bottom: 83px;
+      display: flex;
+      flex-direction: column;
+      gap: 75px;
+
+      @media(max-width: 1200px) {
+        gap: 55px;
+      }
+
+      h1 {
+        font-family: 'Open Sans Bold';
+        font-size: 80px;
+        color: white;
+      }
+
+      p {
+        font-family: 'Open Sans Regular';
+        font-size: 22px;
+        color: white;
+        max-width: 700px;
+      }
+
+      .data {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        .weather {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+
+          img {
+            width: 50px;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
+
+        .temp {
+          p {
+            font-family: 'Open Sans Bold';
+            font-size: 45px;
+            color: white;
+          }
+        }
+
+        .humidity {
+          line-height: 1;
+
+          P {
+            font-family: 'Open Sans Bold';
+            font-size: 33px;
+          }
+
+          .text {
+            font-family: 'Open Sans regular';
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
