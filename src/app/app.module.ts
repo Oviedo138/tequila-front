@@ -17,6 +17,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactSectionComponent } from './components/contact-section/contact-se
     NavBarComponent,
     FooterComponent,
     HomePageComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    CarouselSectionComponent
   ],
   imports: [
     BrowserModule,

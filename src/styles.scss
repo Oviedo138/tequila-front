@@ -74,3 +74,9 @@ button {
 .p-component-overlay {
   display: none;
 }
+
+.carousel-images {
+  .swiper-pagination {
+    display: none;
+  }
+}
