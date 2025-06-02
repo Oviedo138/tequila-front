@@ -15,6 +15,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MainBannerComponent } from './components/home/main-banner/main-banner.component';
+import { AboutUsComponent } from './components/home/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainBannerComponent } from './components/home/main-banner/main-banner.c
     NavBarComponent,
     FooterComponent,
     HomePageComponent,
-    MainBannerComponent
+    MainBannerComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
