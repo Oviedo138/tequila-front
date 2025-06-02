@@ -8,16 +8,7 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 })
 export class ContactSectionComponent {
 
-  // public images = [
-  //   '/assets/images/logos/mex2.png',
-  //   '/assets/images/logos/mex2.png',
-  //   '/assets/images/logos/mex2.png',
-  //   '/assets/images/logos/mex2.png',
-  // ]
-
   constructor(
-    // private renderer: Renderer2,
-    // private router: Router,
     @Inject(PLATFORM_ID) private platformId: any,
   ) { }
 

@@ -30,6 +30,8 @@ nav {
           height: 50px;
           img {
             height: 45px;
+            max-width: 100%;
+            object-fit: contain;
             width: fit-content;
           }
         }

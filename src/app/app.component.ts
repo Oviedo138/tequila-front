@@ -21,11 +21,13 @@ export class AppComponent {
   ) { }
 
   ngOnInit() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
-      }
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          window.scrollTo(0, 0);
+        }
+      });
+    }
   }
 
   ngAfterViewInit() {
@@ -39,5 +41,3 @@ export class AppComponent {
   }
 
 }
-
-
