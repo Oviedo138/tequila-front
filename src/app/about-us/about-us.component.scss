@@ -8,6 +8,7 @@
     border-radius: 20px;
     overflow: hidden;
     margin-top: 9vw;
+    margin-bottom: 9vw;
 
     @media (min-width: 576px) {
       border-radius: 30px;
@@ -54,9 +55,22 @@
   .text-content {
     padding: 20px;
 
+    // Aplicación de la animación fadeInUp a las etiquetas de texto
+    h2,
+    h3,
+    p,
+    ul,
+    ol {
+      animation: fadeInUp 1s ease forwards;
+    }
+
     h2 {
       font-size: 1.8rem;
       margin-bottom: 10px;
+      font-weight: bold; // Negrita para los h2
+      color:black;
+      margin-top: 20px;
+      margin-bottom: 20px;
 
       @media (min-width: 576px) {
         font-size: 2.2rem;
@@ -85,6 +99,11 @@
     ol {
       font-size: 1rem;
       margin-bottom: 15px;
+      color: black; // Los párrafos serán de color negro
+      margin-top: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6; // Mejora la legibilidad del texto
+      font-weight: 400; // Peso normal para los párrafos
 
       @media (min-width: 576px) {
         font-size: 1.2rem;
@@ -103,5 +122,17 @@
         margin-bottom: 10px;
       }
     }
+  }
+}
+
+// Definición de keyframes para la animación fadeInUp
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
