@@ -19,6 +19,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MainBannerComponent } from './components/home/main-banner/main-banner.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
+import { OptionsComponent } from './components/banner-sec/options.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CarouselSectionComponent } from './components/carousel-section/carousel
     HomePageComponent,
     MainBannerComponent,
     ContactSectionComponent,
-    CarouselSectionComponent
+    CarouselSectionComponent,
+    OptionsComponent
   ],
   imports: [
     BrowserModule,
