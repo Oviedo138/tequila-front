@@ -11,7 +11,7 @@
         [attr.aria-label]="option.label"
       >
         <div class="option-icon">
-          <span class="icon">{{ option.icon }}</span>
+          <img [src]="option.isActive ? option.activeIcon : option.icon" [alt]="option.label" class="icon">
         </div>
         <span class="option-label">{{ option.label }}</span>
       </button>

@@ -16,19 +16,20 @@
     }
 
     .options-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 30px;
-      justify-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
       max-width: 1000px;
       margin: 0 auto;
+      flex-wrap: nowrap; // Evita que los elementos se vayan a la siguiente línea
 
       .option-button {
         background: transparent;
         border: none;
         padding: 20px;
-        width: 100%;
-        max-width: 180px;
+        flex: 1; // Cada botón toma el mismo espacio disponible
+        min-width: 0; // Permite que el flex shrink funcione correctamente
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -47,7 +48,7 @@
         &:focus {
           outline: none;
           .option-icon {
-            box-shadow: 0 0 0 3px #e8c91a9c;
+            box-shadow: 0 0 0 3px #d4a6742d;
           }
         }
 
@@ -63,9 +64,9 @@
           transition: all 0.3s ease;
 
           .icon {
-            font-size: 28px;
-            line-height: 1;
-            color: #5f6368;
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
             transition: all 0.3s ease;
           }
         }
@@ -77,20 +78,19 @@
           text-align: center;
           line-height: 1.3;
           transition: all 0.3s ease;
+          white-space: nowrap; // Evita que el texto se corte en múltiples líneas
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         // Estado activo - solo el círculo cambia
         &.active {
           .option-icon {
-            background-color: #e8c91a9c;
-
-            .icon {
-              color: white;
-            }
+            background-color: #d4a6742d;
           }
 
           .option-label {
-            color: #0000009c;
+            color: #5f6368;
             font-weight: 600;
           }
         }
@@ -98,7 +98,7 @@
     }
   }
 
-  // Responsive design
+  // Responsive design - mantiene una sola fila pero hace los elementos más pequeños
   @media (max-width: 768px) {
     padding: 40px 16px;
 
@@ -109,19 +109,18 @@
       }
 
       .options-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 20px;
+        gap: 15px;
 
         .option-button {
-          padding: 15px;
-          max-width: 140px;
+          padding: 15px 10px;
 
           .option-icon {
             width: 56px;
             height: 56px;
 
             .icon {
-              font-size: 24px;
+              width: 28px;
+              height: 28px;
             }
           }
 
@@ -133,7 +132,7 @@
     }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     padding: 30px 12px;
 
     .options-container {
@@ -143,23 +142,83 @@
       }
 
       .options-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 10px;
 
         .option-button {
-          padding: 12px;
+          padding: 12px 8px;
 
           .option-icon {
             width: 50px;
             height: 50px;
 
             .icon {
-              font-size: 22px;
+              width: 24px;
+              height: 24px;
             }
           }
 
           .option-label {
             font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 25px 8px;
+
+    .options-container {
+      .options-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+      }
+
+      .options-grid {
+        gap: 8px;
+
+        .option-button {
+          padding: 10px 4px;
+
+          .option-icon {
+            width: 44px;
+            height: 44px;
+
+            .icon {
+              width: 22px;
+              height: 22px;
+            }
+          }
+
+          .option-label {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  // Para pantallas muy pequeñas, ajusta aún más
+  @media (max-width: 360px) {
+    .options-container {
+      .options-grid {
+        gap: 5px;
+
+        .option-button {
+          padding: 8px 2px;
+
+          .option-icon {
+            width: 40px;
+            height: 40px;
+
+            .icon {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .option-label {
+            font-size: 10px;
           }
         }
       }

@@ -3,6 +3,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export interface Option {
   id: string;
   icon: string;
+  activeIcon: string;
   label: string;
   isActive?: boolean;
 }
@@ -18,32 +19,38 @@ export class OptionsComponent {
   options: Option[] = [
     {
       id: 'vive-magia',
-      icon: '🏛️',
+      icon: 'assets/images/estados_b.svg',
+      activeIcon: 'assets/images/estados.svg',
       label: 'Vive su magia'
     },
     {
       id: 'atractivos-actividades',
-      icon: '🎯',
+      icon: 'assets/images/archaeological_b.svg',
+      activeIcon: 'assets/images/archaeological.svg',
       label: 'Atractivos actividades'
     },
     {
       id: 'festividades',
-      icon: '🎭',
+      icon: 'assets/images/festividades_b.svg',
+      activeIcon: 'assets/images/festividades.svg',
       label: 'Festividades'
     },
     {
       id: 'hoteles',
-      icon: '🏨',
+      icon: 'assets/images/hoteles_b.svg',
+      activeIcon: 'assets/images/hoteles.svg',
       label: 'Hoteles'
     },
     {
       id: 'restaurante',
-      icon: '🍽️',
+      icon: 'assets/images/restaurantes_b.svg',
+      activeIcon: 'assets/images/restaurantes.svg',
       label: 'Restaurante'
     },
     {
       id: 'tours',
-      icon: '📷',
+      icon: 'assets/images/tours_b.svg',
+      activeIcon: 'assets/images/tours.svg',
       label: 'Tours'
     }
   ];
