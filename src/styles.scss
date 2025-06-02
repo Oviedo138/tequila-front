@@ -59,6 +59,10 @@ button {
   cursor: pointer;
 }
 
+section {
+  overflow: hidden;
+}
+
 .p-sidebar .p-sidebar-content {
   padding: 0px;
   box-shadow: 30px 0px 50px rgba(0, 0, 0, 0.5);
