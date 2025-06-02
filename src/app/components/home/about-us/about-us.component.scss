@@ -1,0 +1,272 @@
+section {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ebebeb; // Ajusta el fondo según tu diseño
+
+    .ribbon {
+      width: auto;
+      height: auto;       // Altura fija (puedes ajustar este valor)
+      object-fit: cover;  // Corta y ajusta la imagen para que cubra el contenedor
+      margin-bottom: 100px;
+      max-width: 100%; // Permite que la imagen ocupe todo el ancho disponible
+    }
+
+
+
+
+    // Contenedor de los 3 logos en fila
+    .logos {
+      display: flex;
+      flex-wrap: wrap; // Permite que los logos se vayan a la siguiente línea si es necesario
+      align-items: center;
+      justify-content: center;
+      gap: 5px; // Espaciado entre logos
+      margin-bottom: 20px;
+
+      .logo {
+        width: 80px;
+        height: auto;
+        max-width: 100%; // Evita que se exceda del contenedor
+      }
+
+      .tequila-logo {
+        width: 300px;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .mexico-desconocido-icon {
+        width: 250px;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+
+    // Línea separadora gris
+    .separator-line {
+      width: 39%; // Puedes ajustar este ancho según el diseño
+      border-top: 2px solid #ccc;
+      margin: 30px auto; // Márgenes consistentes
+    }
+
+    // Sección de redes sociales: usando imágenes en lugar de íconos de fuente
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-bottom: 20px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ebebeb;
+        transition: background-color 0.3s ease;
+
+        img {
+          width: 40px;
+          height: auto;
+        }
+
+        &:hover {
+          background-color: #ccc;
+        }
+      }
+    }
+
+    // Contenedor para los bloques de Información de Contacto e Información adicional
+    .info-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 20px;
+      width: 100%;
+
+      .contact-info,
+      .information {
+        flex: 1;
+        max-width: 300px; // Ajusta el ancho según el espacio disponible
+      }
+    }
+
+    // Estilo para los bloques de información
+    .contact-info,
+    .information {
+      h2 {
+        color: #800080;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        margin-top: 40px;
+      }
+
+      p {
+        margin-bottom: 40px;
+        font-size: 1em;
+        color: #000000; // Color de texto para mayor legibilidad
+        font-weight: bold;
+      }
+    }
+
+    .information {
+      a {
+        color: #ff69b4;
+        text-decoration: none;
+        font-weight: bold;
+        margin: auto;
+      }
+    }
+
+    // Icono inferior (México en Colores)
+    .mexico-icon {
+      width: 150px;
+      height: auto;
+      margin-top: 40px;
+      margin-bottom: 40px; // Espacio extra debajo del icono
+    }
+  }
+}
+
+/* Media Query para pantallas medianas (tablets, etc.) */
+@media (max-width: 768px) {
+  section {
+    .container {
+      .ribbon {
+        margin-bottom: 60px;
+      }
+
+      .logos {
+        gap: 5px;
+        .logo {
+          width: 60px;
+        }
+        .tequila-logo {
+          width: 200px;
+        }
+        .mexico-desconocido-icon {
+          width: 180px;
+        }
+      }
+
+      .separator-line {
+        width: 60%;
+        margin: 20px auto;
+      }
+
+      .social-icons {
+        gap: 15px;
+        a {
+          width: 35px;
+          height: 35px;
+          img {
+            width: 30px;
+          }
+        }
+      }
+
+      .info-container {
+        flex-direction: column;
+        gap: 20px;
+        .contact-info,
+        .information {
+          max-width: none;
+        }
+      }
+
+      .contact-info,
+      .information {
+        h2 {
+          font-size: 1.3em;
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+        p {
+          font-size: 0.9em;
+          margin-bottom: 20px;
+        }
+      }
+
+      .mexico-icon {
+        width: 120px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  section {
+    .container {
+      padding: 10px;
+
+      .ribbon {
+        margin-bottom: 40px;
+      }
+
+      .logos {
+        flex-direction: column;
+        gap: 10px;
+        .logo {
+          width: 50px;
+        }
+        .tequila-logo {
+          width: 150px;
+        }
+        .mexico-desconocido-icon {
+          width: 140px;
+        }
+      }
+
+      .separator-line {
+        width: 70%;
+        margin: 15px auto;
+      }
+
+      .social-icons {
+        gap: 10px;
+        a {
+          width: 30px;
+          height: 30px;
+          img {
+            width: 22px;
+          }
+        }
+      }
+
+      .info-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-info,
+      .information {
+        h2 {
+          font-size: 1.1em;
+        }
+        p {
+          font-size: 0.85em;
+        }
+        .information {
+          a {
+            font-size: 0.9em;
+          }
+        }
+      }
+
+      .mexico-icon {
+        width: 100px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
