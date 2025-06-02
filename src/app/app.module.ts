@@ -9,18 +9,22 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { PrimengModule } from './extra-module/primeng.module';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { CountUpModule } from 'ngx-countup';
+import { NgxFastMarqueeModule } from "ngx-fast-marquee";
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     FooterComponent,
-    HomePageComponent
+    HomePageComponent,
+    ContactSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    CountUpModule,
+    NgxFastMarqueeModule,
   ],
   providers: [
     MessageService,

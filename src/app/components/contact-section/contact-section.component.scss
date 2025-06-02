@@ -1,0 +1,76 @@
+section {
+  overflow: hidden;
+  background-color: #ececec;
+  .row {
+    height: 50px;
+    background: url("/assets/images/icons-row.svg") repeat-x center;
+    background-size: contain;
+    // img {
+    //   height: fit-content;
+    //   max-height: 30px;
+    //   object-fit: cover;
+    // }
+  }
+  .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .logo {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        svg {
+          width: 50px;
+          min-width: 70px;
+        }
+        img {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+      .redes {
+      }
+      .links {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 30px;
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #622f51;
+          }
+          .as {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+              text-decoration: none;
+              width: fit-content;
+              color: #c15d76;
+            }
+            &.gray {
+              color: #070707;
+            }
+          }
+        }
+      }
+    }
+  }
+}
