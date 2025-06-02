@@ -10,25 +10,24 @@ SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-
-  title = 'pueblos-magicos-app';
+  title = 'tequila-front';
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
-    private router: Router,
-  ) { }
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.router.events.subscribe((event) => {
-        if (event instanceof NavigationEnd) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (isPlatformBrowser(this.platformId)) {
           window.scrollTo(0, 0);
         }
-      });
-    }
+      }
+    });
   }
 
   ngAfterViewInit() {

@@ -20,6 +20,8 @@ import { MainBannerComponent } from './components/home/main-banner/main-banner.c
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
 import { OptionsComponent } from './components/banner-sec/options.component';
+import { AttractionsComponent } from './components/attractions/attractions.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { OptionsComponent } from './components/banner-sec/options.component';
     MainBannerComponent,
     ContactSectionComponent,
     CarouselSectionComponent,
-    OptionsComponent
+    OptionsComponent,
+    AttractionsComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

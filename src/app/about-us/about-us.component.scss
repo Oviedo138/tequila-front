@@ -1,0 +1,107 @@
+.content {
+  .title-container {
+    position: relative;
+    background-image: url('/assets/images/Attractions/title.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 9vw;
+
+    @media (min-width: 576px) {
+      border-radius: 30px;
+    }
+
+    // Overlay semitransparente para oscurecer la imagen de fondo
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      z-index: 1;
+
+      @media (min-width: 576px) {
+        border-radius: 30px;
+      }
+    }
+
+    .title-text {
+      position: relative;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      line-height: 1.2;
+      text-align: center;
+      padding: 4.8vw 0;
+      z-index: 2;
+
+      @media (min-width: 576px) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 991px) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  .text-content {
+    padding: 20px;
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+
+      @media (min-width: 576px) {
+        font-size: 2.2rem;
+      }
+
+      @media (min-width: 991px) {
+        font-size: 2.6rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+
+      @media (min-width: 576px) {
+        font-size: 1.8rem;
+      }
+
+      @media (min-width: 991px) {
+        font-size: 2.1rem;
+      }
+    }
+
+    p,
+    ul,
+    ol {
+      font-size: 1rem;
+      margin-bottom: 15px;
+
+      @media (min-width: 576px) {
+        font-size: 1.2rem;
+      }
+
+      @media (min-width: 991px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    ul,
+    ol {
+      padding-left: 20px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
