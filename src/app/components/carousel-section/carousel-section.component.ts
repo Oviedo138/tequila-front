@@ -48,5 +48,4 @@ export class CarouselSectionComponent {
     initialSlide: 1,
   };
 
-
 }

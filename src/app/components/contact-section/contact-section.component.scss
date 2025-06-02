@@ -120,6 +120,15 @@ section {
           }
         }
       }
+      .mexico {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
     }
   }
 }
