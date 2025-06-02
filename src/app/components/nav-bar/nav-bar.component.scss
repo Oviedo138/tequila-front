@@ -3,13 +3,18 @@ nav {
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 11;
   .black {
     background-color: black;
   }
   .container {
     .content {
       width: 100%;
-      padding: 10px 0px;
+      padding: 16px 0px;
+      transition: all 0.3s ease-in-out;
+      &.scroll {
+        padding: 10px 0px;
+      }
       .nav-mobile {
         width: 100%;
         display: flex;
@@ -30,6 +35,8 @@ nav {
           height: 50px;
           img {
             height: 45px;
+            max-width: 100%;
+            object-fit: contain;
             width: fit-content;
           }
         }

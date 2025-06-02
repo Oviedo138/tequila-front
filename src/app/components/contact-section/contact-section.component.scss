@@ -1,0 +1,134 @@
+section {
+  overflow: hidden;
+  background-color: #ececec;
+  .row {
+    height: 25px;
+    background: url("/assets/images/icons-row.svg") repeat-x center;
+    background-size: contain;
+  }
+  .container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .logo {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        svg {
+          width: 50px;
+          min-width: 70px;
+        }
+        img {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
+      .line {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        height: 2px;
+        background-color: rgb(206, 206, 206);
+      }
+      .redes {
+        width: fit-content;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        a {
+          width: 40px;
+          height: 40px;
+          // background-color: red;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 18px;
+            object-fit: contain;
+          }
+          &.face {
+            background-color: #425893;
+          }
+          &.x {
+            background-color: #4da9e8;
+          }
+          &.insta {
+            background: radial-gradient(
+              circle at 30% 107%,
+              #fdf497 0%,
+              #fdf497 5%,
+              #fd5949 45%,
+              #d6249f 60%,
+              #285aeb 90%
+            );
+          }
+          &.you {
+            background-color: #b53d33;
+          }
+          &.tik {
+            background-color: #000000;
+          }
+        }
+      }
+      .links {
+        padding-top: 30px;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        gap: 30px;
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #621e4b;
+          }
+          .as {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+              text-decoration: none;
+              width: fit-content;
+              color: #c15d76;
+              font-weight: 500;
+            }
+            &.gray {
+              gap: 30px;
+              a {
+                color: #070707;
+              }
+            }
+          }
+        }
+      }
+      .mexico {
+        width: 100%;
+        max-width: 150px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

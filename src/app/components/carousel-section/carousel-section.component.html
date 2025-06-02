@@ -1,0 +1,15 @@
+<section class="m-section">
+  <div class="carousel" *ngIf="images">
+    <!-- [effect]="'fade'" -->
+    <swiper [config]="swiperConfig" [navigation]="false" [centeredSlides]="false" [autoplay]="true" [loop]="true"
+      class="carousel-images" [pagination]="{ clickable: true }">
+      @for (img of images; track $index) {
+      <ng-template swiperSlide>
+        <div class="content-carousel">
+          <img [src]="img" alt="">
+        </div>
+      </ng-template>
+      }
+    </swiper>
+  </div>
+</section>

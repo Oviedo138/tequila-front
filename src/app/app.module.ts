@@ -9,13 +9,16 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { PrimengModule } from './extra-module/primeng.module';
 import { ToastModule } from 'primeng/toast';
 import { ConfirmationService, MessageService } from 'primeng/api';
+import { CountUpModule } from 'ngx-countup';
+import { NgxFastMarqueeModule } from 'ngx-fast-marquee';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MainBannerComponent } from './components/home/main-banner/main-banner.component';
-import { AboutUsComponent } from './components/home/about-us/about-us.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { CarouselSectionComponent } from './components/carousel-section/carousel-section.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { AboutUsComponent } from './components/home/about-us/about-us.component'
     FooterComponent,
     HomePageComponent,
     MainBannerComponent,
-    AboutUsComponent
+    ContactSectionComponent,
+    CarouselSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,8 @@ import { AboutUsComponent } from './components/home/about-us/about-us.component'
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    CountUpModule,
+    NgxFastMarqueeModule,
   ],
   providers: [
     MessageService,
