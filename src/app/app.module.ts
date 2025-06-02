@@ -29,9 +29,9 @@ import { AboutUsComponent } from './about-us/about-us.component';
     NavBarComponent,
     FooterComponent,
     HomePageComponent,
-    MainBannerComponent,
     ContactSectionComponent,
     CarouselSectionComponent,
+    MainBannerComponent,
     OptionsComponent,
     AttractionsComponent,
     AboutUsComponent

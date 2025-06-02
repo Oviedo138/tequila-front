@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  onOptionSelected(event: any) {
+    console.log('Opción seleccionada:', event);
+    // Aquí puedes agregar la lógica que necesites.
+  }
+
 }
