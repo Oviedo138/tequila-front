@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/tequila-front/browser",
+    "target": "tequila",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

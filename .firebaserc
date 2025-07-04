@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "mindcode-c9f16"
+  },
+  "targets": {
+    "mindcode-c9f16": {
+      "hosting": {
+        "tequila": [
+          "tequila-mexico"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
